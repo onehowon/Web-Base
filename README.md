@@ -69,3 +69,30 @@
 
 ## HTTP 기반 API
 #### 일반적인 API는 user agent와 서버간 데이터를 교환하는데 사용하는 XMLHttpRequest API
+
+## Requests Message
+#### Request Header
+#### GET /1.html HTTP/1.1                    => 요청행
+#### Host: localhost:8080                       => 네트워크의 컴퓨터 식별하는 이름
+#### ...
+#### ...
+#### User-Agent : ...                        => 유저 컴퓨터, 웹브라우저 정보
+#### ...
+#### ...
+#### Accept-Encoding : gzip, deflate, br     => 데이터 양이 많으면 압축해서 전송하는데, 어떤 압축방식을 지원하는지 설명
+#### ...
+#### ...
+#### If-Modified-Since: Tue, ...             => 마지막으로 페이지를 다운받은게 언제인지 확인하여 다시 다운받을지 결정
+#### blank line>                                    => 블랭크로 헤더와 바디 구분
+#### Request Message Body
+
+## HTTP Response Format
+### 1xx codes : 정보를 주기 위한 응답
+### 2xx codes : 통신 성공
+### 3xx codes : 리다이렉션
+### 4xx codes : 클라이언트 에러
+### 5xx codes : 서버 에러
+
+# 웹킷
+## 웹킷의 동작 과정
+### 
