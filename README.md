@@ -94,5 +94,9 @@
 ### 5xx codes : 서버 에러
 
 # Domain
-## public DNS
-### 
+## DNS 서버의 원리
+### 도메인 네임 시스템 서버
+#### IP 주소를 기억하여 가시성이 좋은 문자열을 변환했을 때 IP를 반환해 웹 접속이 가능하게 함
+
+### blog.example.com
+#### blog는 sub, example은 second-level, com은 top-level로 구분
