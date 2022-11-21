@@ -100,3 +100,12 @@
 
 ### blog.example.com
 #### blog는 sub, example은 second-level, com은 top-level로 구분
+#### 상위가 하위를 알고 있어야 함
+#### sub <- second-level <- top-level <- root
+
+## 질의
+#### root-name-server에게 먼저 물어봄(com이 전담하는 ip 주소들을 알려줌)
+#### top-level 네임 서버를 전담하는 ip를 알려줌
+#### second-level 도 마찬가지로 sub로 이동
+#### sub에서 원하는 도메인에 대한 ip 주소를 알 수 있게 됨
+
