@@ -93,6 +93,6 @@
 ### 4xx codes : 클라이언트 에러
 ### 5xx codes : 서버 에러
 
-# 웹킷
-## 웹킷의 동작 과정
-### 
+# Domain
+## public DNS
+###
