@@ -112,3 +112,21 @@
 # nslookup
 #### 도메인 주소(example.com)를 던지면
 #### 도메인에 대한 IP를 반환해주는 명령어
+## nslookup -type=ns (도메인 주소)
+#### 네임서버를 반환
+## nslookup example.com nameserver
+#### DNS 주소 기반 IP를 반환
+
+# DNS record & CNAME
+## A 레코드
+#### A 레코드의 장점은 한번의 요청으로 찾아갈 서버의 IP 주소를 한번에 알 수 있다는 점이다. 
+#### 반면 단점은 IP 주소가 자주 바뀌는 환경에서는 조금 번거로울 수 있다는 점이다. 
+#### 예를 들어, 172.17.0.2 서버에서 plusblog.co.kr, dev.plusblog.co.kr, travel.plusblog.co.kr 등 
+#### 여러개의 서브 도메인들을 처리하고 있다고하자. 각 서브 도메인들을 A 레코드로만 매핑시켰다면, 172.17.0.2라는 
+#### IP 주소가 172.17.0.3이라는 주소로 변경되었다면 모든 A 레코드를 찾아서 변경해야 한다. 
+
+## CNAME 레코드
+#### CNAME 레코드의 장점은 IP 주소가 자주 변경되는 환경에서 유연하게 대응할 수 있다는 점이다. 
+#### 예를 들어, dev.plusblog.co.kr, travel.plusblog.co.kr 도메인 정보를 plusblog.co.kr이라는 주소로 매핑시키는 CNAME 레코드로 저장하고, 
+#### plusblog.co.kr이라는 주소를 172.17.0.2 라는 IP 주소로 매핑시키는 A 레코드로 저장해 놨다면, 
+#### 서버의 IP 주소가 바뀌었을 때 plusblog.co.kr의 A 레코드 정보만 변경시키면 된다.
